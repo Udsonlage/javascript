@@ -55,6 +55,7 @@ form {
 
 .input:focus {
     border: 1px solid #b8f18a;
+    outline: none;
 }
 
 .button:hover {

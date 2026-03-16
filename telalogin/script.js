@@ -10,16 +10,25 @@ botao.addEventListener ("click", (event) => {
         usuario.placeholder = "Preencha o usuário!";
         usuario.style.borderColor = "red";
     }
+    //Não está funcionando!!
+    else if (senha.value === "") {
+        senha.placeholder = "Preencha a senha!";
+        senha.style.borderColor = "red";
+    }
+
     else {
         usuario.style.borderColor = "white";
+        senha.style.borderColor = "white";
     }
 
 });
 
 usuario.addEventListener("blur", () => {
 
+    if (usuario.value === "") {
     usuario.placeholder = "Preencha o usuário!";
     usuario.style.borderColor = "red";
+    }
 });
 
 usuario.addEventListener("focus", () => {
@@ -30,8 +39,10 @@ usuario.addEventListener("focus", () => {
 
 senha.addEventListener("blur", () => {
 
+    if (senha.value === "") {
     senha.placeholder = "Preencha a senha!";
     senha.style.borderColor = "red";
+    }
 });
 
 senha.addEventListener("focus", () => {
