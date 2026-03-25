@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: blueviolet;
+        }
+
+        h1 {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque facilis reprehenderit vel, voluptates repellendus reiciendis corporis. Quod assumenda non repellendus, consequuntur, dolor vel distinctio repellat ducimus libero consectetur provident quo!</p>
+    <script>
+        //o valor que o prompt recebe com a pergunta se torna um string, então precisamos converter para number.
+        var n1 = Number.parseInt(window.prompt('Digite um número: '))
+        //Number.parseInt() converte uma string para um number de número inteiro.
+        //Number.parseFloat() converte uma string para um number de número "quebrado"
+        //Number() converte uma string para um number para qualquer um dos dois números.
+        //String() ou n.toString() converte um number para string
+        var n2 = Number.parseInt(window.prompt('Digite outro número: '))
+        var s = n1 + n2
+        //string + string é concatenação
+        //number + number é adição
+        window.alert('A soma entre ${n1} e ${n2} é ' ${s})
+        //o ${} é uma forma mais simples e atual do que usar o "+".
+    </script>
+</body>
+</html>
