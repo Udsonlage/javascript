@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var nome = window.prompt('Qual é seu nome')
+        document.write('Olá, ${nome}! Seu nome tem ${nome.length} letras.') // Coloca o que está escrito entre () no documento HTML
+        document.write('Seu nome em maiúsculo é ${nome.toUpperCase()}')
+        document.write('Seu nome em minúsculo é ${nome.toLowerCase()}')
+        /*
+            Convertendo números pelo Node.js:
+
+            .toFixed() - mudar casas decimais
+            .toFixed().replace('','') - mudar um elemento para o outro do número.
+            .toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) - Coloca o tipo de moeda se for transformar o número em salário.
+        */
+    </script>
+</body>
+</html>
