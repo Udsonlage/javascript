@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Qual é o seu país de origem?</h2>
+    <p>
+        <label for="pais">País de origem:</label>
+        <input type="text" name="pais" id="pais">
+        <input type="button" value="Enviar" id="enviar" onclick="verificar()">
+    </p>
+    <div id="resposta"></div>
+    <script>
+        var pais = document.querySelector('#pais')
+        var resposta = document.querySelector('#resposta')
+        var pais1 = "Brasil"
+        var pais2 = "EUA"
+        var pais3 = "Argentina"
+        var pais4 = "África do Sul"
+
+        function verificar() {
+            if (pais.value === "Brasil") {
+                resposta.innerHTML = `Você é do ${pais1}!`
+            } else {
+                resposta.innerHTML = 'Você é estrangeiro!'
+            }
+
+        }
+    </script>
+</body>
+</html>
