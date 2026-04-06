@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Verificador de idade</title>
+</head>
+<body>
+    <header>
+        <h1 id="titulo">Verificador de Idade</h1>
+    </header>
+    <main id="main">
+        <form action="cadastro.php" method="post" autocomplete="off">
+            <fieldset style="border: none;">
+                <label for="inascimento">Ano de Nascimento:</label>
+                <input type="number" name="nasc" id="inasc" placeholder="2000">
+            </fieldset>
+            <fieldset style="border: none;">
+                <p style="display: inline;">Sexo:</p>
+                <input type="radio" name="sexo" id="imasc"><label for="imasc">Masculino</label>
+                <input type="radio" name="sexo" id="ifem"><label for="ifem">Feminino</label>
+            </fieldset>
+            <fieldset style="border: none;">
+                <input type="button" value="Verificar" id="botao" onclick="clicar()">
+            </fieldset>
+        </form>
+        <section>
+            <p id="resultado">Preencha os dados acima para ver o resultado!</p>
+            <img src="midia/menino.jpg" alt="menino" id="imenino">
+            <img src="midia/menina.jpg" alt="menina" id="imenina">
+            <img src="midia/homem.jpg" alt="honmem" id="ihomem">
+            <img src="midia/mulher.jpg" alt="mulher" id="imulher">
+            <img src="midia/idoso.jpg" alt="idoso" id="iidoso">
+            <img src="midia/idosa.jpg" alt="idosa" id="iidosa">
+        </section>
+    </main>
+    <footer>
+        <p><em>Exercício</em></p>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
