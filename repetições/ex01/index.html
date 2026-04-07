@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(122, 122, 255);
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        main {
+            width: 500px;
+            height: auto;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin: auto;
+        }
+
+        footer p {
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    <main>
+        <form action="">
+            <p>
+                <label for="iinicio">Início:</label>
+                <input type="number" name="inicio" id="iinicio">
+            </p>
+            <p>
+                <label for="ifim">Fim:</label>
+                <input type="number" name="fim" id="ifim">
+            </p>
+            <p>
+                <label for="ipasso">Passo:</label>
+                <input type="number" name="passo" id="ipasso">
+            </p>
+            <p>
+                <input type="button" value="Contar" id="botao" onclick="clicar()">
+            </p>
+            <div id="res">Preparando a contagem...</div>
+        </form>
+    </main>
+    <footer>
+        <p><em>Exercício</em></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
