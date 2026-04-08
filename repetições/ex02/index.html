@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(168, 168, 255);
+        }
+        header h1 {
+            text-align: center;
+        }
+
+        main {
+            width: 500px;
+            height: auto;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin: auto;
+        }
+
+        footer p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <main>
+        <form action="">
+            <p>
+                <label for="inumero">Número:</label>
+                <input type="number" name="numero" id="inumero">
+                <input type="button" value="Gerar Tabela" onclick="gerar()">
+            </p>
+            <p>
+                <select name="tabuada" id="itabuada">
+                    <option>Digite um número acima</option>
+                </select>
+            </p>
+        </form>
+    </main>
+    <footer>
+        <p><em>Exercício</em></p>
+    </footer>
+    <script>
+        function gerar() {
+        var numero = document.querySelector('#inumero')
+        var tabuada = document.querySelector('#itabuada')
+
+            if (numero.value.length == 0) {
+                window.alert('Preencha o número!');
+            } else {
+                var n = Number(numero.value)
+                tabuada.innerHTML = ''
+
+                for(var x = 1;x <= 10;x++) {
+                    var item = document.createElement('option') //Aqui eu crio uma tag option
+                    item.text = `${n} x ${x} = ${n*x}` //aqui eu coloco o que vai ser escrito na option
+                    item.value = `tabuada${n}` //esse aqui é o value no HTML da option
+                    tabuada.appendChild(item) //aqui é para a option criada aperecer na tag select
+                    
+                }
+            }
+        }
+    </script>
+</body>
+</html>
