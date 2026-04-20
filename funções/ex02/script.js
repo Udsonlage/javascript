@@ -320,7 +320,7 @@ console.log(f(10,5))*/
 const itc = cores()
 console.log(itc.next().value) //retorna o primeiro yield
 console.log(itc.next().value) //retorna o segundo
-console.log(itc.next().value) //retorna o terceiro*/
+console.log(itc.next().value) //retorna o terceiro
 
 function* perguntas() {
     const nome = yield 'Qual seu nome?'
@@ -331,5 +331,26 @@ function* perguntas() {
 const itp = perguntas()
 console.log(itp.next().value)
 console.log(itp.next('Udson').value)
-console.log(itp.next('Jiu-jitsu').value) //ao invés de dar undefield, ele pega o return
+console.log(itp.next('Jiu-jitsu').value) //ao invés de dar undefield, ele pega o return*/
 
+///////////////////////////////
+
+// método this
+
+function aluno(nome, valor) {
+    this.nome = nome
+    this.valor = valor
+
+    this.dadosArrow = function () {
+        setTimeout(() => {
+            console.log(this.nome)
+        }, 2000)
+        
+        setTimeout(() => {
+            console.log(this.valor)
+        }, 4000)
+    }
+}
+
+const all = new aluno ('Udson', 10)
+all.dadosArrow()
