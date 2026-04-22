@@ -68,16 +68,16 @@
         const caixaVerde = document.querySelector("#verde")
         const caixaVermelha = document.querySelector("#vermelho")
 
-        const valores = [20, 22, 22, 18, 21]
+        const valores = [17, 15, 17, 15, 10]
         array.innerHTML= `[${valores}]`
 
-        botao.addEventListener("click", (evt) => {
-            const verificar = valores.every((v, i) => { //every só vai dar true se todos os valores derem true na condição.
+        botao.addEventListener("click", (evt) => { 
+            const verificar = valores.some((v, i) => { // some é o CONTRÁRIO de every. Se quases todos os valores não condizerem e apenas um condizer com a condição, vai dar true.
                 if (v >= 18) {
                     resultado.innerHTML = 'Tudo certo'
                     return true
                 } else {
-                    resultado.innerHTML = `Valor da posição ${i} não está em conformidade.`
+                    resultado.innerHTML = `Não tem nenhum valor em conformidade.`
                     return false
                 }
             })
