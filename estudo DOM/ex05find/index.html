@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        #verde {
+            background-color: lightgreen;
+            border: 4px solid darkgreen;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        #azul {
+            background-color: lightblue;
+            border: 4px solid darkblue;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        #botao {
+            color: white;
+            background-color: darkblue;
+            border: none;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        #vermelho {
+            background-color: lightcoral;
+            border: 4px solid darkred;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        p {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <section id="verde">
+        <p>Array:</p>
+        <p id="array"></p>
+    </section>
+    <section id="azul">
+        <input type="button" value="Verificar" id="botao">
+    </section>
+
+    <section id="vermelho">
+        <p>Resultado:</p>
+        <p id="resultado"></p>
+    </section>
+    <script>
+        const array = document.querySelector("#array")
+        const botao = document.querySelector("#botao")
+        const resultado = document.querySelector("#resultado")
+        const caixaVerde = document.querySelector("#verde")
+        const caixaVermelha = document.querySelector("#vermelho")
+
+        const valores = [20, 22, 22, 18, 21]
+        array.innerHTML= `[${valores}]`
+
+        botao.addEventListener("click", (evt) => {
+            const verificar = valores.every((v, i) => {
+                if (v >= 18) {
+                    resultado.innerHTML = 'Tudo certo'
+                    return true
+                } else {
+                    resultado.innerHTML = `Valor da posição ${i} não está em conformidade.`
+                    return false
+                }
+            })
+        })
+
+    </script>
+</body>
+</html>
