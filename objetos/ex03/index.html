@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            width: 200px;
+            height: 25px;
+            border-radius: 5px;
+        }
+
+        #iadicionar {
+            background-color: gray;
+            border-radius: 5px;
+            border: none;
+            margin: 5px;
+        }
+
+        .resultado {
+            height: auto;
+            border: 5px solid black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <div class="nome">
+            <label for="inome">Nome:</label><br>
+            <input type="text" name="nome" id="inome">
+        </div>
+        <div class="idade">
+            <label for="iidade">Idade:</label><br>
+            <input type="number" name="idade" id="iidade">
+        </div>
+        <div class="botao">
+            <input type="button" value="Adicionar" id="iadicionar">
+        </div>
+        <div class="resultado"></div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
