@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            border: none;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #olhos{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            width: 400px;
+            height: 200px;
+        }
+
+        .olho{
+            width: 200px;
+            height: 200px;
+            transform-origin: center center;
+        }
+    </style>
+</head>
+<body>
+    <div id="olhos">
+        <img id="olhoEsquerdo" src="olho.jpg" alt="olho" class="olho">
+        <img id="olhoDireito" src="olho.jpg" alt="olho" class="olho">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
